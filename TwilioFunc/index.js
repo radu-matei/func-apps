@@ -7,7 +7,7 @@ module.exports = function (context, req) {
   const formValues = qs.parse(req.body);
 
   const twiml = new MessagingResponse();
-  twiml.message('Welcome to Cloud Application Development workshop! ' + formValues.Body);
+  twiml.message('Welcome to the Cloud Application Development workshop! You said: ' + formValues.Body);
 
   context.res = {
     status: 200,
